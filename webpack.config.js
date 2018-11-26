@@ -5,10 +5,18 @@ const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
-  entry: {app: './src/index.js'},
+  entry: {
+    // another: './src/another-module.js',
+    index: './src/index.js'
+  },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   devtool: 'inline-source-map',
   devServer: {

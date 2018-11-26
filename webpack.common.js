@@ -1,17 +1,25 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const webpack = require('webpack')
-
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-  entry: {app: './src/index.js'},
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+  entry: {
+    app: './src/index.js'
+  },
+  optimization: {
+    //将公用模块抽离，
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({title: 'Product'}),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new HtmlWebpackPlugin({title: '自建'}), //生成文件
+    new CleanWebpackPlugin(['dist']) //清理压缩的文件
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
 }
