@@ -12,10 +12,15 @@ module.exports = merge(common, {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist', //告诉webpack-dev-server 去./dist 找index.html 入口文件，webpack-dev-server --open 运行命令直接在浏览器中打开文件了
+    // contentBase: './dist', //告诉webpack-dev-server 去./dist 找index.html 入口文件，webpack-dev-server --open 运行命令直接在浏览器中打开文件了
     hot: true
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: '护肤手账',
+      filename: 'index.html',
+      template: './src/index.html'
+    }), //生成入口文件
     new webpack.HotModuleReplacementPlugin() //热替换，不需要刷新
   ]
 })

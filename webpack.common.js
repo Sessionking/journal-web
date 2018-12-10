@@ -1,5 +1,4 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     app: './src/index.js'
@@ -11,15 +10,15 @@ module.exports = {
     }
   },
   plugins: [
-    new HtmlWebpackPlugin({title: '自建'}), //生成文件
     new CleanWebpackPlugin(['dist']) //清理压缩的文件
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+        use: ['style-loader', 'css-loader', 'les-loader']
+      },
+      {test: /\.js$/, exclude: /node_modules/, use: {loader: 'babel-loader'}}
     ]
   }
 }
