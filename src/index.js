@@ -1,11 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import {Input} from 'antd'
+import App from '@/layout/App'
 const MOUNT_NODE = document.getElementById('app')
 
-export default class App extends Component {
-  render() {
-    return <Input defaultValue="2" />
-  }
-}
 ReactDOM.render(<App />, MOUNT_NODE)
