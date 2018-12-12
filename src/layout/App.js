@@ -1,7 +1,30 @@
 import React, {Component} from 'react'
-
-export default class App extends Component {
+import request from '@/utils'
+import {connect} from 'react-redux'
+import {Button} from 'antd'
+import {add} from '@/actions'
+class App extends Component {
+	componentDidMount() {
+		request('/mock/loginInfo').then(res => {
+			console.log(res)
+		})
+	}
+	onClick = () => {
+		const {count} = this.props
+		this.props.dispatch(add(count + 1))
+	}
 	render() {
-		return <div>11</div>
+		const {count, onClick} = this.props
+		return (
+			<div>
+				{count}
+				<Button onClick={this.onClick}>点击</Button>
+			</div>
+		)
 	}
 }
+const mapStateToProps = ({plus}) => ({
+	count: plus.count
+})
+
+export default connect(mapStateToProps)(App)

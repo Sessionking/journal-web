@@ -2,14 +2,15 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const {resolve} = require('path')
 module.exports = {
 	entry: {
-		app: './src/index.js'
+		app: '@layout/index.js'
 	},
 	resolve: {
 		//路径别名，import 的时候直接用别名代替，少写code
 		alias: {
-			'@': resolve(__dirname, '/src'),
-			'@layout': resolve(__dirname, '/src/layout'),
-			'@pages': resolve(__dirname, '/src/pages')
+			'@': resolve(__dirname, 'src/'),
+			'@layout': resolve(__dirname, 'src/layout/'),
+			'@pages': resolve(__dirname, 'src/pages/'),
+			'@utils': resolve(__dirname, 'src/utils/')
 		},
 		extensions: ['.js', '.jsx', '.json'] //不用写扩展名
 	},

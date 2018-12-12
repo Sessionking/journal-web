@@ -1,41 +1,47 @@
 {
-  "name": "myWebpack",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "config": "webpack --config webpack.config.js"
-  },
-  "keywords": [],
-  "author": "xiaoyu",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-import": "^1.11.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "clean-webpack-plugin": "^1.0.0",
-    "css-loader": "^1.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "less-loader": "^4.1.0",
-    "react-router-dom": "^4.3.1",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4"
-  },
-  "dependencies": {
-    "antd": "^3.11.2",
-    "less": "^3.9.0",
-    "lodash": "^4.17.11",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
-  }
+	"name": "myWebpack",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server --config webpack.dev.js",
+		"build": "webpack --config webpack.prod.js",
+		"config": "webpack --config webpack.config.js"
+	},
+	"keywords": [],
+	"author": "xiaoyu",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.2.0",
+		"@babel/plugin-proposal-class-properties": "^7.2.1",
+		"@babel/preset-env": "^7.2.0",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.4",
+		"babel-plugin-import": "^1.11.0",
+		"babel-preset-stage-2": "^6.24.1",
+		"clean-webpack-plugin": "^1.0.0",
+		"css-loader": "^1.0.1",
+		"eslint": "^5.10.0",
+		"eslint-loader": "^2.1.1",
+		"html-webpack-plugin": "^3.2.0",
+		"less-loader": "^4.1.0",
+		"style-loader": "^0.23.1",
+		"uglifyjs-webpack-plugin": "^2.0.1",
+		"webpack": "^4.26.0",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10",
+		"webpack-merge": "^4.1.4"
+	},
+	"dependencies": {
+		"antd": "^3.11.2",
+		"fsevents": "^2.0.1",
+		"less": "^3.9.0",
+		"lodash": "^4.17.11",
+		"react": "^16.6.3",
+		"react-dom": "^16.6.3",
+		"react-redux": "^6.0.0",
+		"react-router-dom": "^4.3.1",
+		"redux": "^4.0.1"
+	}
 }
