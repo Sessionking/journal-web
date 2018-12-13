@@ -1,6 +1,5 @@
-let count = 0
-const add = count => ({
-	type: 'add',
-	count
+const add = (count = 0) => ({
+  type: 'add',
+  count,
 })
 export {add}

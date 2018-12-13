@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import plus from './add'
+import add from './add'
 export default combineReducers({
-	plus
+  add,
 })

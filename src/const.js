@@ -1,12 +1,17 @@
 const menus = [
   {
     key: 'skinCare',
-    title: '护肤手账',
+    title: '日记',
     subMenu: [
-      {key: 'skinCareEntryInfo', title: '护肤品信息录入'},
-      {key: 'skinCareEntryPrice', title: '护肤品价格录入'}
-    ]
-  }
+      {
+        key: 'skinCareEntryInfo',
+        title: '信息录入',
+      },
+      {
+        key: 'skinCareEntryPrice',
+        title: '价格录入',
+      },
+    ],
+  },
 ]
-
-export {menus}
+export default menus
