@@ -1,9 +1,10 @@
 import {message} from 'antd'
 
+const prefix = '/mock'
 const request = (url, option) => {
   const defaultOptions = {method: 'get'}
   const newOptions = {...defaultOptions, ...option}
-  return fetch(url, newOptions)
+  return fetch(`${prefix}/${url}`, newOptions)
     .then(response => response.json())
     .then(res => {
       const {success} = res

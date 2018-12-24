@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import add from './add'
+import * as app from './app'
 
 export default combineReducers({
-  add,
+  ...app,
 })

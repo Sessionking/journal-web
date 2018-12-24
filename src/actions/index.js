@@ -1,5 +1,3 @@
-const add = (count = 0) => ({
-  type: 'add',
-  count,
-})
-export {add}
+import * as app from './app'
+
+export {app}

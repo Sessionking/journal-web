@@ -1,15 +1,28 @@
 const menus = [
   {
-    key: 'skinCare',
-    title: '日记',
+    key: 'diary',
+    title: '生活日常',
     subMenu: [
       {
-        key: 'skinCareEntryInfo',
-        title: '信息录入',
+        key: 'caseImport',
+        title: '日常事件录入',
+        url: '/diary/import',
+      },
+    ],
+  },
+  {
+    key: 'skinCare',
+    title: '护肤手账',
+    subMenu: [
+      {
+        key: 'entryInfo',
+        title: '护肤品信息录入',
+        url: '/skinCare/entryInfo',
       },
       {
-        key: 'skinCareEntryPrice',
-        title: '价格录入',
+        key: 'entryPrice',
+        title: '护肤品价格录入',
+        url: '/skinCare/entryPrice',
       },
     ],
   },
