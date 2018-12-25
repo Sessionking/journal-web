@@ -5,6 +5,7 @@ import {app} from '@actions'
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
 import Header from './header'
 import LeftSider from './leftSider'
+import RouteCollection from '@/routes'
 import '@styles/index.less'
 import './index.less'
 
@@ -35,7 +36,9 @@ class App extends Component {
           <Header loginInfo={loginInfo} />
           <Layout>
             <LeftSider menus={menus} />
-            <Content>3</Content>
+            <Content className="content">
+              <RouteCollection />
+            </Content>
           </Layout>
         </Layout>
       </LocaleProvider>

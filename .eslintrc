@@ -8,6 +8,12 @@
     "window": true,
     "fetch": true
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
     "max-len": [1, 120, 2, {"ignoreComments": true}],
     "no-debugger": "off",
