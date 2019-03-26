@@ -1,12 +1,14 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Layout, LocaleProvider} from 'antd'
+import {withRouter} from 'react-router-dom'
 import {app} from '@actions'
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
-import Header from './header'
-import LeftSider from './leftSider'
 import RouteCollection from '@/routes'
 import '@styles/index.less'
+
+import Header from './header'
+import LeftSider from './leftSider'
 import './index.less'
 
 const {Content} = Layout
@@ -50,4 +52,4 @@ const mapStateToProps = ({loginInfo, menus}) => ({
   menus,
 })
 
-export default connect(mapStateToProps)(App)
+export default withRouter(connect(mapStateToProps)(App))

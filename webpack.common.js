@@ -6,7 +6,7 @@ module.exports = {
     app: '@layout/index.js',
   },
   resolve: {
-    // 路径别名，import 的时候直接用别名代替，少写code
+    // 解析配置:路径别名，import 的时候直接用别名代替，少写code
     alias: {
       '@': resolve(__dirname, 'src/'),
       '@actions': resolve(__dirname, 'src/actions/'),
